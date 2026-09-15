@@ -1,0 +1,32 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+dist/
+*.egg-info/
+*.sqlite3*
+*.db*
+.DS_Store
+
+# Local credentials and provider configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.claude/
+.codex/
+
+# Personal libraries, exports, and diagnostics
+*.sqlite*
+/my-library/
+/puzzle.json
+*.log
+.coverage
+htmlcov/
+
+# Editor and build output
+.idea/
+.vscode/
+build/

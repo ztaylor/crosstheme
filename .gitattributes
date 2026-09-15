@@ -1,0 +1,2 @@
+# Textual/Rich owns the formatting of generated visual snapshots.
+docs/*.svg linguist-generated=true -whitespace

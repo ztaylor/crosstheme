@@ -1,0 +1,30 @@
+[project]
+name = "crosstheme"
+version = "0.1.0"
+description = "Crosswords for curious minds. A theme-first terminal puzzle studio."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["textual>=8.0,<9"]
+
+[project.scripts]
+crosstheme = "crosstheme.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=1", "ruff>=0.12"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.ruff.lint.per-file-ignores]
+"src/crosstheme/seeds.py" = ["E501"]
