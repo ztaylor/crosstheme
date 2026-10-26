@@ -6,7 +6,7 @@ A theme-first crossword studio for your terminal. Pick a subject, choose a diffi
 and turn what you know into a puzzle. Generate with your signed-in Claude or Codex CLI,
 or start offline with software engineering and Roman history.
 
-![Crosstheme solving screen](docs/play.svg)
+![Crosstheme solving screen](https://raw.githubusercontent.com/ztaylor/crosstheme/main/docs/play.svg)
 
 ## Run
 
@@ -177,4 +177,9 @@ uv build
 Tests cover all theme/difficulty/length combinations, seeded generation, independent grid
 invariants, save/reopen, clocks and completion, subprocess contracts, malformed content,
 timeouts/cancellation, and headless terminal interactions at desktop and compact sizes.
-See [development notes](docs/BUILD.md) and [project instructions](AGENTS.md).
+See [development notes](https://github.com/ztaylor/crosstheme/blob/main/docs/BUILD.md) and
+[project instructions](https://github.com/ztaylor/crosstheme/blob/main/AGENTS.md).
+
+## License
+
+MIT. See [LICENSE](https://github.com/ztaylor/crosstheme/blob/main/LICENSE).

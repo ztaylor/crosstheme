@@ -36,7 +36,8 @@ The tests run offline with temporary databases and fake provider executables. Th
 - Textual play and navigation at 80 × 24 and larger terminal sizes, generation and cancellation,
   complete cell highlights, mouse targets, and rapid letter/navigation/quit batches.
 
-GitHub Actions runs the same checks on pushes and pull requests. Real provider checks are manual
+GitHub Actions runs the same checks on pushes and pull requests, on Linux with Python
+3.11–3.15 and on macOS with 3.11 and 3.15. Real provider checks are manual
 and use the caller's existing CLI authentication and quota; they are not part of CI.
 
 ## Screenshots
@@ -49,6 +50,18 @@ The SVGs are generated Textual snapshots using offline Roman-history puzzles and
 
 Regenerate screenshots from the app when changing the interface; do not hand-edit the SVGs.
 Use a temporary library with sample data for captures.
+
+## Releasing
+
+The version lives in `src/crosstheme/__init__.py`. To release:
+
+1. Update `__version__` and move the `CHANGELOG.md` entry from unreleased to today's date.
+2. Commit, then tag and push: `git tag v0.1.0 && git push origin v0.1.0`.
+
+The `Release` workflow tests, builds, confirms the tag matches the package version, and
+publishes to PyPI with trusted publishing; no API token is stored. One-time setup: add a
+trusted publisher on PyPI for owner `ztaylor`, repository `crosstheme`, workflow
+`release.yml`, environment `pypi`, and create the `pypi` environment in the GitHub repository.
 
 ## Scope and limitations
 

@@ -1,17 +1,45 @@
 [project]
 name = "crosstheme"
-version = "0.1.0"
+dynamic = ["version"]
 description = "Crosswords for curious minds. A theme-first terminal puzzle studio."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Zachary Taylor", email = "35504+ztaylor@users.noreply.github.com" }]
 requires-python = ">=3.11"
 dependencies = ["textual>=8.0,<9"]
+keywords = ["crossword", "puzzle", "terminal", "tui", "textual", "claude", "codex"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: End Users/Desktop",
+    "Operating System :: MacOS",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: 3.15",
+    "Topic :: Games/Entertainment :: Puzzle Games",
+]
+
+[project.urls]
+Homepage = "https://github.com/ztaylor/crosstheme"
+Source = "https://github.com/ztaylor/crosstheme"
+Issues = "https://github.com/ztaylor/crosstheme/issues"
+Changelog = "https://github.com/ztaylor/crosstheme/blob/main/CHANGELOG.md"
 
 [project.scripts]
 crosstheme = "crosstheme.cli:main"
 
 [build-system]
-requires = ["hatchling"]
+requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
+
+[tool.hatch.version]
+path = "src/crosstheme/__init__.py"
 
 [dependency-groups]
 dev = ["pytest>=8", "pytest-asyncio>=1", "ruff>=0.12"]

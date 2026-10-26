@@ -9,6 +9,7 @@ import sqlite3
 import sys
 from pathlib import Path
 
+from crosstheme import __version__
 from crosstheme.engine import Progress, format_time
 from crosstheme.providers import available_providers, generate
 from crosstheme.storage import Store, default_path
@@ -17,7 +18,7 @@ from crosstheme.storage import Store, default_path
 def main() -> None:
     parser = argparse.ArgumentParser(description="Crosstheme — crosswords for curious minds")
     parser.add_argument("--data-dir", type=Path, help="Override the local puzzle library directory")
-    parser.add_argument("--version", action="version", version="crosstheme 0.1.0")
+    parser.add_argument("--version", action="version", version=f"crosstheme {__version__}")
     sub = parser.add_subparsers(dest="command")
     new = sub.add_parser("new", help="Generate and save a puzzle, then play")
     new.add_argument("topic")
