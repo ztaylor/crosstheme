@@ -11,20 +11,20 @@ or start offline with software engineering and Roman history.
 ## Run
 
 Requires Python 3.11+ and [uv](https://docs.astral.sh/uv/getting-started/installation/).
-Clone the repository and run from its directory:
+Install the `crosstheme` command from GitHub:
+
+```sh
+uv tool install git+https://github.com/ztaylor/crosstheme
+crosstheme
+```
+
+Or run from a clone:
 
 ```sh
 git clone https://github.com/ztaylor/crosstheme.git
 cd crosstheme
 uv sync --locked
 uv run crosstheme
-```
-
-For a command available anywhere in your terminal:
-
-```sh
-uv tool install .
-crosstheme
 ```
 
 No API key is needed when your CLI is already signed in with your subscription.

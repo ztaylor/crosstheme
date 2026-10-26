@@ -53,15 +53,9 @@ Use a temporary library with sample data for captures.
 
 ## Releasing
 
-The version lives in `src/crosstheme/__init__.py`. To release:
-
-1. Update `__version__` and move the `CHANGELOG.md` entry from unreleased to today's date.
-2. Commit, then tag and push: `git tag v0.1.0 && git push origin v0.1.0`.
-
-The `Release` workflow tests, builds, confirms the tag matches the package version, and
-publishes to PyPI with trusted publishing; no API token is stored. One-time setup: add a
-trusted publisher on PyPI for owner `ztaylor`, repository `crosstheme`, workflow
-`release.yml`, environment `pypi`, and create the `pypi` environment in the GitHub repository.
+The version lives in `src/crosstheme/__init__.py`. To release, update `__version__`, date the
+`CHANGELOG.md` entry, commit, then tag and push: `git tag v0.1.0 && git push origin v0.1.0`.
+Users can pin a release with `uv tool install git+https://github.com/ztaylor/crosstheme@v0.1.0`.
 
 ## Scope and limitations
 
